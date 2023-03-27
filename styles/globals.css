@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    min-height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  @apply text-white px-[30px] py-[8px] rounded-3xl bg-primary cursor-pointer hover:opacity-70 transition-all;
+}
+.slick-dots {
+  @apply !flex justify-start w-full;
+}
+
+.slick-dots .slick-active div {
+  @apply bg-primary;
+}
+
+.slick-dots div {
+  @apply !m-0 !mt-8;
+}

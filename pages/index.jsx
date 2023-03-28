@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Home from './home'
 import Header from '../components/layout/Header'
-import Tuna from '@/components/layout/Tuna'
 export default function Index() {
   return (
     <div>

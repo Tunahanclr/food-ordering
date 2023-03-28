@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 
 const Header = () => {
   const router = useRouter();
-console.log(router.pathname)
   const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
 
@@ -18,7 +17,7 @@ console.log(router.pathname)
   <Logo className="mr-4" />
 </div>
           <nav
-          className={`sm:static absolute  top-0 left-0 sm:w-auto sm:h-auto w-full h-full sm:text-white text-black sm:bg-transparent z-50 bg-white sm:flex hidden ${
+           className={`sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-screen sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden  ${
             isMenuModal === true && "!grid place-content-center"
           }`}
         >

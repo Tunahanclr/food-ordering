@@ -3,14 +3,14 @@ import * as Yup from 'yup';
 import Title from '@/components/ui/Title';
 import Link from 'next/link';
 
-const Login = () => {
+const Admin = () => {
   const initialValues = {
-    email: '',
+    username: '',
     password: '',
   };
 
   const validationSchema = Yup.object({
-    email: Yup.string().email('Geçerli bir email adresi giriniz.').required('Email alanı zorunludur.'),
+    username: Yup.string().required('Username is required'),
     password: Yup.string().min(6, 'Şifre en az 6 karakter olmalıdır.').required('Şifre alanı zorunludur.'),
   });
 
@@ -21,33 +21,23 @@ const Login = () => {
   return (
     <div className='container mx-auto'>
       <div className='flex flex-col items-center my-20'>
-        <Title addClass='text-5xl'>Login</Title>
+        <Title addClass='text-5xl'>Admin</Title>
 
         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
           {({ isSubmitting }) => (
-            <Form className='mt-2'>
+            <Form className='mt-2 flex flex-col justify-center items-center'>
               <div className='mb-4'>
-                <label htmlFor='email' className='block text-gray-700 font-bold mb-2'>
-                  Email
-                </label>
-                <Field
-                  type='email'
-                  name='email'
-                  id='email'
-                  className="h-12 w-full border border-primary outline-none px-4 peer pt-2"
-                />
-                <ErrorMessage name='email' component='div' className='text-yellow-500 text-sm mt-2' />
+              <Field type='text' name='username' id='username' placeholder='Enter your username' className="h-12  w-[400px] sm:w-[500px] border  border-primary
+                 outline-none px-4 peer pt-2"/>
+                <ErrorMessage name='username'  component='div'className='text-yellow-500 text-sm mt-2'  />
               </div>
-
               <div className='mb-6'>
-                <label htmlFor='password' className='block text-gray-700 font-bold mb-2'>
-                  Şifre
-                </label>
+           
                 <Field
                   type='password'
                   name='password'
                   id='password'
-                  className="h-12 w-[500px] border  border-primary outline-none px-4 peer pt-2"
+                  className="h-12 w-[350px] sm:w-[500px] border  border-primary outline-none px-4 peer pt-2"
                 />
                 <ErrorMessage name='password' component='div'className='text-yellow-500 text-sm mt-2'  />
               </div>
@@ -74,4 +64,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Admin;

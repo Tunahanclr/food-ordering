@@ -11,7 +11,11 @@ const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
   return (
-    <div className={`h-[5.5rem] bg-secondary z-50 relative ${router.asPath === "/" ? "bg-transparent " : "bg-secondary"}`}>
+          <div
+    className={`h-[5.5rem] z-50 relative ${
+      router.asPath === "/" ? "bg-transparent" : "bg-secondary"
+    }`}
+  >
       <div className="container mx-auto z-50 text-white flex justify-between items-center h-full">
       <div className="flex  z-50 gap-x-4 items-center">
   <Logo className="mr-4" />
@@ -54,9 +58,7 @@ const Header = () => {
           <button onClick={() => setIsSearchModal(true)}>
             <FaSearch className="hover:text-primary cursor-pointer transition-all" />
           </button>
-          <a href="#" className="md:inline-block hidden sm">
-            <button className="btn-primary">Order Online</button>
-          </a>
+            <button className="btn-primary md:inline-block hidden sm">Order Online</button>
           <button
             className="sm:hidden inline-block"
             onClick={() => setIsMenuModal(true)}

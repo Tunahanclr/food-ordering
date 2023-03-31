@@ -27,7 +27,7 @@ const Admin = () => {
           {({ isSubmitting }) => (
             <Form className='mt-2 flex flex-col justify-center items-center'>
               <div className='mb-4'>
-              <Field type='text' name='username' id='username' placeholder='Enter your username' className="h-12  w-[400px] sm:w-[500px] border  border-primary
+              <Field type='text' name='username' id='username' placeholder='Enter your username' className="h-12 w-[350px] sm:w-[500px] border  border-primary
                  outline-none px-4 peer pt-2"/>
                 <ErrorMessage name='username'  component='div'className='text-yellow-500 text-sm mt-2'  />
               </div>
@@ -37,6 +37,7 @@ const Admin = () => {
                   type='password'
                   name='password'
                   id='password'
+                  placeholder='Enter Your Passoword'
                   className="h-12 w-[350px] sm:w-[500px] border  border-primary outline-none px-4 peer pt-2"
                 />
                 <ErrorMessage name='password' component='div'className='text-yellow-500 text-sm mt-2'  />

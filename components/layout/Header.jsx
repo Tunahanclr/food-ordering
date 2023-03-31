@@ -1,5 +1,5 @@
 import {FaShoppingCart,FaUserAlt,FaSearch} from 'react-icons/fa'
-import Logo from "../ui/Logo";
+import Logo from "../ui/logo";
 import Search from "../ui/Search";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
 import { useState } from "react";

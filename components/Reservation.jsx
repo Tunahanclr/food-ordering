@@ -18,7 +18,7 @@ const Reservation = () => {
             referrerPolicy="no-referrer-when-downgrade"
             className="md:h-[500px] h-[300px]  w-full"
           ></iframe>
-        </div>
+        </div>  
     </div>
   );
 };

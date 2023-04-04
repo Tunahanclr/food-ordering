@@ -2,8 +2,6 @@ import React from "react";
 import Title from "./ui/Title";
 
 const Reservation = () => {
-
-
   return (
     <div className="container mx-auto py-12">
       <Title addClass="text-[70px] text-center mb-10">Location</Title>

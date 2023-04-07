@@ -15,7 +15,7 @@ const Category = () => {
             onChange={(e) => setInputText(e.target.value)}
             value={inputText}
             className="h-12   sm:w-full border  border-primary outline-none px-4 peer pt-2"
-            />
+          />
           <button
             className="btn-primary "
             onClick={() => {

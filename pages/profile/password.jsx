@@ -9,9 +9,7 @@ const password = () => {
     confirmPassword: "",
   };
 
-  const validationSchema = Yup.object({
-
-  });
+  const validationSchema = Yup.object({});
 
   const onSubmit = (values, { setSubmitting }) => {
     console.log(values);

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { RiShoppingCart2Fill } from "react-icons/ri";
+import Link from "next/link";
 
 const MenuItem = () => {
   return (
@@ -17,9 +18,9 @@ const MenuItem = () => {
         </p>
         <div className="flex justify-between items-center mt-4">
           <span>$20</span>
-          <button className="btn-primary !w-10 !h-10 !rounded-full !p-0 grid place-content-center">
+          <Link href="/product" className="btn-primary !w-10 !h-10 !rounded-full !p-0 grid place-content-center">
             <RiShoppingCart2Fill />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
+import axios from "axios";
 import Title from "@/components/ui/Title";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
-
 const register = () => {
   const initialValues = {
     username: "",
@@ -22,9 +22,19 @@ const register = () => {
       .required("Confirm password is required"),
   });
 
-  const onSubmit = (values, { setSubmitting }) => {
-    console.log(values);
-    setSubmitting(false);
+  const onSubmit = async (values, actions) => {
+    // submit your form data here
+    try {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/users/register`,
+        values
+      );
+      console.log(onSubmit)
+    } catch (error) {
+      console.log(error);
+    }
+ // reset form after successful submit
+     actions.resetForm();
   };
 
   return (
@@ -99,16 +109,12 @@ const register = () => {
                   className="text-yellow-500 text-sm mt-2"
                 />
               </div>
-              <button
-                type="submit"
-                className=" md:ml-0 btn-primary"
-                disabled={isSubmitting}
-              >
-                Register
-              </button>
-              <div>
-                <Link href="/auth/login">
-                  <span className="text-sm m underline cursor-pointer text-secondary">
+              <div className="flex flex-col w-full gap-y-3 mt-6">
+          <button className="btn-primary" type="submit">
+            REGISTER
+          </button>
+          <Link href="/auth/login">
+            <span className="text-sm underline cursor-pointer text-secondary">
                     Do you have a account?
                   </span>
                 </Link>

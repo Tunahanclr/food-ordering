@@ -23,17 +23,14 @@ const register = () => {
   });
 
   const onSubmit = async (values, actions) => {
-    // submit your form data here
     try {
       const res = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/users/register`,
         values
       );
-      console.log(onSubmit)
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     }
- // reset form after successful submit
      actions.resetForm();
   };
 
